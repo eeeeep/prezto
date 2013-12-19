@@ -146,3 +146,7 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
+userfiles=("${ZDOTDIR:-$HOME}"/.zprezto/user/zpreztorc.d/*.zsh(DN))
+for file in $userfiles; do
+    source "$file";
+done

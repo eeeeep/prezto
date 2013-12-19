@@ -12,3 +12,7 @@ fi
 
 # Customize to your needs...
 
+userfiles=("${ZDOTDIR:-$HOME}"/.zprezto/user/zshrc.d/*.zsh(DN))
+for file in $userfiles; do
+    source "$file";    
+done
