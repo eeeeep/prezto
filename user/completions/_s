@@ -1,0 +1,9 @@
+#compdef s
+
+typeset -A opt_args
+local context state line
+
+_arguments -s -S ""
+
+case $state in
+ (foo)
