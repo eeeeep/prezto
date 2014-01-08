@@ -30,8 +30,11 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'directory' \
   'spectrum' \
+  'python' \
   'utility' \
   'completion' \
+  'syntax-highlighting' \
+  'history-substring-search' \
   'prompt'
 
 #
