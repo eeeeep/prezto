@@ -1,9 +1,11 @@
 #compdef s
 
-typeset -A opt_args
-local context state line
+_generate_s_completions() {
+    FIND_TARGET_CMD=${SSH_FIND_TARGET:-ssh-find-targets.py}
+    eval $FIND_TARGET_CMD | while read x; do 
+        res=("${(s/::/)x}"); 
+        compadd -S "=$res[2]" "$res[1]"; 
+    done 
+}
 
-_arguments -s -S ""
-
-case $state in
- (foo)
+_generate_s_completions "$@"
